@@ -76,7 +76,8 @@
       openModal() {
         this.$showModal(Modal, {
             props: { id: 1 },
-            animated: true,
+            animated: false,
+            fullscreen: false,
           });
     }
     },

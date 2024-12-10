@@ -11,7 +11,7 @@
     export default {
         methods: {
             goToDetailPage() {
-                 $goto('pin')
+                 this.$goto('pin');
                 }
         },
     }
