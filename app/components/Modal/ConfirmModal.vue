@@ -29,6 +29,7 @@
           <ButtonApi
           text="Eliminar comercio"
           variant="primary"
+          @emitAction="confirmAction"
           
         />
         </StackLayout>
@@ -44,10 +45,15 @@
     },
     methods: {
       closeModal() {
-        // Lógica para eliminar comercio
         console.log("Comercio eliminado");
         this.$modal.close();
       },
+      confirmAction(){
+        this.$goto('home', {props:{ id:1234 }})
+        this.$modal.close();
+      }
+
+
     },
     data() {
       return {

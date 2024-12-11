@@ -73,12 +73,12 @@
   </template>
   
   <script>
- import TextFieldConfirm from '../Inputs/TextFieldConfirm.vue';
+ import TextFieldConfirm from './TextFieldConfirm.vue';
 
   export default {
     data() {
       return {
-        pinArray: [null, null, null, null], // Guarda los valores del PIN
+        pinArray: [null, null, null, null], 
         numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9], 
         isVisible: false
       };

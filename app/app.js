@@ -12,5 +12,5 @@ Vue.prototype.$goto = function (to, options) {
 }
 
 new Vue({
-  render: h => h('frame', [h(router['confirm'])])
+  render: h => h('frame', [h(router['home'])])
 }).$start()

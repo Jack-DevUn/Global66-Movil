@@ -29,6 +29,7 @@
       contentComponent: ContentCommerce,
     };
   },
+    props:['id'],
   methods: {
     changeContent(idCommerce) {
       if (idCommerce === undefined) {
@@ -41,9 +42,9 @@
     
   created() {
     try {
-      console.log(this.$router)
+      console.log(this.id)
       console.log(this)
-      const context = this.$router.context;
+      const context = this.$router.prop;
      
 
       if (context && context.idCommerce != undefined) {

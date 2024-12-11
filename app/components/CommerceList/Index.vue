@@ -10,7 +10,7 @@
         </FlexboxLayout>
   
         <FlexboxLayout flexDirection="column" class="mt-6">
-          <CommerceList v-for="{id,commerce,amount} in comerce" :key="id" :commerce="commerce" :Amount="amount" @showModal="openModal"></CommerceList>
+          <CommerceList v-for="{id,commerce,amount} in comerce" :key="id" :commerce="commerce" :Amount="amount" @showModal="openModal" @confirmAction="goToConfirm"></CommerceList>
         </FlexboxLayout>
       </FlexboxLayout>
   
@@ -79,6 +79,10 @@
             animated: false,
             fullscreen: false,
           });
+    },
+    actionModal(){
+      this.$modal.close();
+
     }
     },
   };

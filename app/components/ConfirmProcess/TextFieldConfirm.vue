@@ -50,12 +50,10 @@
       border-color: #00a676; 
       clip-path: circle(50% at 50% 50%); 
       background-color: transparent; 
-
     }
     .valueView{
-        color:rgba(0, 182, 130, 1);
-        text-align: center;
-
+      color:rgba(0, 182, 130, 1);
+      text-align: center;
       font-family: Montserrat;
       font-style: normal;
       font-weight: 600;
@@ -63,7 +61,6 @@
       height: 80px; 
       margin-top: 0;
       padding-top: 0;
-
     }
 
 </style>
