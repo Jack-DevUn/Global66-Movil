@@ -1,9 +1,9 @@
 import HomePage from "~/view/HomePage.vue"
-import PinPage from "~/view/PinPage.vue"
+import ConfirmPage from "~/view/ConfirmPage.vue"
 
 
 const router = { 
    home: HomePage,
-   pin: PinPage,
+   confirm: ConfirmPage,
 }
 export default router

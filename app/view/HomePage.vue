@@ -5,25 +5,60 @@
         <Header />
       </template>
       <template v-slot:content>
-        <Content />
+        <component :is="contentComponent" />
       </template>
     </Layout>
   </page>
   </template>
   
   <script>
-  import Layout from './LayoutHome.vue';
-  import Header from '../components/Header/Index.vue';
-  import Content from '../components/CommerceList/Index.vue';
+  import Layout from './Layout.vue';
+  import Header from '@/components/Header/Index.vue';
+  import ContentCommerce from '@/components/CommerceList/Index.vue';
+  //import ContentConfirmProcess from '@/components/ConfirmProcess/Index.vue';
   
   
   export default {
     name: 'Home',
     components: {
       Layout,
-      Header,
-      Content
+      Header
     },
+    data() {
+    return {
+      contentComponent: ContentCommerce,
+    };
+  },
+  methods: {
+    changeContent(idCommerce) {
+      if (idCommerce === undefined) {
+        this.contentComponent = ContentCommerce;
+      } else {
+        //this.contentComponent = ContentConfirmProcess;
+      }
+     }
+    },
+    
+  created() {
+    try {
+      console.log(this.$router)
+      console.log(this)
+      const context = this.$router.context;
+     
+
+      if (context && context.idCommerce != undefined) {
+        this.changeContent(context.idCommerce);
+        console.log("entra id commmerce")
+      } else {
+        console.log("entra No commerce")
+        this.changeContent();
+      }
+    } catch (error) {
+      console.error('Error al acceder al contexto:', error);
+      this.changeContent(); 
+    }
+  } 
+    
   };
   </script>
   

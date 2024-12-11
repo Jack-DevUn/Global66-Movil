@@ -21,3 +21,13 @@
   src: url('~app/fonts/Montserrat-Bold.ttf') format('truetype');
   font-weight: bold;
 }
+
+Page {
+  color: rgba(65, 71, 123, 1);
+  font-family: 'Montserrat';
+}
+
+Label, Button, TextField {
+  color: rgba(65, 71, 123, 1);
+  font-family: 'Montserrat';
+}
