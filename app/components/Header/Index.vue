@@ -7,6 +7,7 @@
     <Label
       text="<" 
       class="text-4xl cursor-pointer font-light"
+      @tap="this.$navigateBack()"
     />
 
     <!-- Espacio para centrar el contenido -->

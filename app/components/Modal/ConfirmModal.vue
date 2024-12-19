@@ -49,7 +49,7 @@
         this.$modal.close();
       },
       confirmAction(){
-        this.$goto('home', {props:{ id:1234 }})
+        this.$goto('confirm', {props:{ id:1234 }})
         this.$modal.close();
       }
 

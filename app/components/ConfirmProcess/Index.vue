@@ -7,7 +7,7 @@
                  class="content-text text-center text-sm leading-tight m-1 mb-12 " textWrap="true" 
           />
 
-          <FlexboxLayout class="h-9 justify-center items-center" flexDirection="row">
+          <FlexboxLayout class="h-24 justify-center items-center" flexDirection="row">
             
             <TextFieldConfirm
               v-for="(pin, index) in pinArray"
@@ -80,7 +80,8 @@
       return {
         pinArray: [null, null, null, null], 
         numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9], 
-        isVisible: false
+        isVisible: false,
+        isCorrect: true
       };
     },
     components:{
@@ -107,6 +108,28 @@
         // Alternar visibilidad 
         this.isVisible = !this.isVisible;
       },
+      verifyPin(){
+        const expected = [6, 3, 4, 5]; 
+
+       
+
+        console.log(this.isCorrect)
+
+
+      }
+    },
+    watch: {
+      pinArray(newValue){
+
+        if(!newValue.includes(null)){
+          console.log("Ingresa");
+          verifyPin();
+        }
+
+
+        }
+
+      }
     },
   };
   </script>

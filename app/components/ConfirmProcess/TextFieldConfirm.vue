@@ -1,23 +1,26 @@
 <template>
+  <FlexboxLayout flexDirection="column">
+    <!-- Estado 2: Tiene valor y el estado es visible, mostrar el valor -->
+    <FlexboxLayout class="m-0 p-0 h-10">
+    <Label
+        v-show="isVisible "
+        :text="valueCom" 
+        class="valueView"
+      /> 
+    </FlexboxLayout>
     <FlexboxLayout class="m-0 p-0">
       <!-- Estado 1: No tiene valor, mostrar una imagen -->
       <Label class="withoutValue mt-1"
         v-show="valueCom == null"
       />
   
-      <!-- Estado 2: Tiene valor y el estado es visible, mostrar el valor -->
-      <Label
-        v-show="valueCom != null && isVisible "
-        :text="valueCom" 
-        class="valueView"
-      /> 
-  
       <!-- Estado 3: Tiene valor, pero no es visible, mostrar otra imagen -->
       <Label
-      v-show="valueCom != null && !isVisible"
+      v-show="valueCom != null"
         class="withValue mt-1"
       />
     </FlexboxLayout>
+  </FlexboxLayout>
   </template>
   
   <script>

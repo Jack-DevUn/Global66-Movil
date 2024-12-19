@@ -64,6 +64,16 @@
                     commerce:"Exito Tarjeta de Crédito",
                     amount:1000000
                 },
+                {
+                    id:7,
+                    commerce:"Nequi Tarjeta Virtual",
+                    amount:1000000
+                },
+                {
+                    id:8,
+                    commerce:"BBVA Tarjeta de Crédito",
+                    amount:1000000
+                },
             ],
         }
     },
